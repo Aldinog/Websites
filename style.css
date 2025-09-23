@@ -527,6 +527,7 @@ a.nav-link:hover {
 section#slider .banner-content {
   width: 40%;
   background: rgba(253, 253, 253, 0.90);
+  margin-top: 30px;
 }
 
 section#slider .main-slider-button-next,
@@ -692,4 +693,184 @@ iconify-icon.quote {
   color: var(--heading-color);
   background-color: transparent;
   box-shadow: none;
+}
+
+/* Google Font Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+nav.sticky{
+  padding: 15px 20px;
+  background: #4070f4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .nav-content{
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #0f36a2;
+}
+nav.sticky .logo a{
+  color: #fff;
+}
+.nav-content .nav-links{
+  display: flex;
+}
+.nav-content .nav-links li{
+  list-style: none;
+  margin: 0 8px;
+}
+ .nav-links li a{
+  text-decoration: none;
+  color: #0E2431;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 4px;
+  transition: all 0.3s ease;
+}
+ .nav-links li a:hover{
+   color: #fafbfc;
+ }
+ nav.sticky .nav-links li a{
+   color: #3a07d1;
+   transition: all 0.4s ease;
+}
+ nav.sticky .nav-links li a:hover{
+  color: #0E2431;
+}
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/tmnl.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: auto;
+  font-family: 'Ubuntu', sans-serif;
+}
+h2{
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: #4070f4;
+}
+.text {
+  text-align: justify;
+  line-height: 1.8;         /* Jarak antar baris biar lebih nyaman dibaca */
+  font-size: 1rem;          /* Ukuran font default */
+  padding: 20px 30px;       /* Padding default (untuk layar kecil) */
+  max-width: 900px;         /* Batasi lebar teks agar tidak terlalu melebar */
+  margin: 0 auto;           /* Biar teks berada di tengah */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;      /* Sudut membulat agar lebih modern */
+  background-color: #fff;   /* Biar kontras dan mudah dibaca */
+  color: #333;              /* Warna teks nyaman di mata */
+}
+
+/* Responsif untuk tablet */
+@media (min-width: 768px) {
+  .text {
+    padding: 30px 50px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Responsif untuk desktop */
+@media (min-width: 1024px) {
+  .text {
+    padding: 40px 80px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Container grid */
+.isotope-container .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom sejajar */
+  gap: 20px; /* jarak antar card */
+}
+
+/* Card styling */
+.isotope-container .item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.isotope-container .item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.isotope-container .item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.isotope-container .item:hover img {
+  transform: scale(1.05);
+}
+
+/* Text styling */
+.isotope-container .item h6 {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.isotope-container .item h4 {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.isotope-container .item h4 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.isotope-container .item h4 a:hover {
+  color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .isotope-container .row {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 kolom */
+  }
+}
+
+@media (max-width: 576px) {
+  .isotope-container .row {
+    grid-template-columns: 1fr; /* HP: 1 kolom */
+  }
 }
